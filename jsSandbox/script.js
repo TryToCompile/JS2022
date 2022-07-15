@@ -35,5 +35,5 @@ function arraySumRecursion(arr){
     if(typeof arr[0] === 'object') return arraySumRecursion(arr[0]) + arraySumRecursion(arr.slice(1));
 }
 // TODO: solve some issues with NaN in some unpredictable or non-standard situations
-console.log(arraySumRecursion([1, 2, [1, 2],[3,[1, 2, 3, 5, 6, 7], 4], 5])); // 
+console.log(arraySumRecursion([1, 2, [1, 2],[3,[1, 2, 3, 5, 6, 7], 4],'str', 5])); // 
 // end of Kata (array sum), 7kyu

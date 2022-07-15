@@ -1,3 +1,10 @@
 body {
 background-color: rgb(103, 246, 151,0.5);
 }
+button {
+    cursor:pointer;
+}
+.row {
+    display:flex;
+    cursor:pointer;
+}
