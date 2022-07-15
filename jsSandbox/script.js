@@ -34,7 +34,7 @@ function arraySumRecursion(arr){
     if(arr.length === 0) return 0;
     if(typeof arr[0] === 'number') return arr[0] + arraySumRecursion(arr.slice(1));
     if(typeof arr[0] === 'object') return arraySumRecursion(arr[0]) + arraySumRecursion(arr.slice(1));
-    if(typeof arr[0] !== 'number' || typeof arr[0] !=='object') return arraySum(arr.slice(1));
+    if(typeof arr[0] !== 'number' || typeof arr[0] !=='object') return arraySumRecursion(arr.slice(1));
 }
 // TODO:  Refactor 
 console.log(arraySumRecursion([1, 2, [1, 2],[3,[1, 2, 3, 5, 6, 7], 4],'str', 5])); // 
