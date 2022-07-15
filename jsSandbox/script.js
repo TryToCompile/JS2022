@@ -27,13 +27,15 @@ function distinct(a) {
 function arraySum(arr) {
     return arr.flat().reduce((a,b) => a+b);
 }
+// TODO: Check if reduce is slower than typical for loop 
   console.log(arraySum([1, 2, [3, 4], 5])); // 15
 // Kata (array sum), 7kyu (recursion)
 function arraySumRecursion(arr){
     if(arr.length === 0) return 0;
     if(typeof arr[0] === 'number') return arr[0] + arraySumRecursion(arr.slice(1));
     if(typeof arr[0] === 'object') return arraySumRecursion(arr[0]) + arraySumRecursion(arr.slice(1));
+    if(typeof arr[0] !== 'number' || typeof arr[0] !=='object') return arraySum(arr.slice(1));
 }
-// TODO: solve some issues with NaN in some unpredictable or non-standard situations
+// TODO:  Refactor 
 console.log(arraySumRecursion([1, 2, [1, 2],[3,[1, 2, 3, 5, 6, 7], 4],'str', 5])); // 
 // end of Kata (array sum), 7kyu
