@@ -45,3 +45,6 @@ function arraySumRecursion(arr){
 // TODO:  Refactor, dont works with strings like 1234asd
 //console.log(arraySumRecursion([1, 2, [1, 2],[3,[1, 2, 3, 5, 6, 7], 4],'str', 5])); // 
 // end of Kata (array sum), 7kyu
+
+
+
