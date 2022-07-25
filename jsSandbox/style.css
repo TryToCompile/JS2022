@@ -10,11 +10,17 @@ button {
     cursor:pointer;
 }
 
-a {
+.link-primary{
     text-decoration: none;
-    color: black;
+    color: rgb(0, 221, 255);
 }
+.link-primary:hover{
+    text-decoration: none;
+}
+
+
 .row {
     display:flex;
     cursor:pointer;
 }
+
