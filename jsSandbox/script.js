@@ -62,3 +62,13 @@ function findOdd (A){
 
 console.log(findOdd([1,1,2,-2,5,2,4,4,-1,-2,5]));
 // end of Kata findodd, 6kyu
+
+
+//start if Kata extract the domain name from URL, 5kyu
+function domainName(url){
+  let tempStr = url.replace('https://','').replace('http://','').replace('www.','').replace('ftp://','').split('.');
+  return tempStr[0].toString();
+}
+console.log(domainName("https://google.co.jp"));
+console.log(domainName("www.xaker.ru"));
+// end of Kata extract the domain name from URL, 5kyu
