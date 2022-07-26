@@ -71,4 +71,27 @@ function domainName(url){
 }
 console.log(domainName("https://google.co.jp"));
 console.log(domainName("www.xaker.ru"));
-// end of Kata extract the domain name from URL, 5kyu
+// end of Kata extract the domain name from URL, 5kyu`
+
+
+
+// start of Kata Matrix Determinant, 4kyu
+let m = [1];
+let m1 = [[1,2],[3,5]];
+let m2 = [[1]];
+function determinant(m) {
+  // return the determinant of the matrix passed in
+ // return m[0][0]*m[1][1];
+  return (m[0][0]*m[1][1] - m[0][1]*m[1][0]);
+}
+
+/*TODO: 
+1) Как найти определитель самой маленькой матрицы? ++ выполнено
+2) Как закинуть это в универсальную рекурсию?
+3) 
+*/
+//console.log(determinant([1])); // 1
+console.log(determinant([[1,1],[4,7]])); // 3
+console.log(determinant([[1,2,3][4,5,6][7,8,9]]));
+//console.log(determinant([[1]]));  // 1
+// end of Kata Matrix Determinant, 4kyu
