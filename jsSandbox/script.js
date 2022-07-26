@@ -47,4 +47,18 @@ function arraySumRecursion(arr){
 // end of Kata (array sum), 7kyu
 
 
+// Kata (findodd) 6 kyu
+function findOdd (A){
+  for (let i = 0; i < A.length; i++) {
+    let arr = A.filter((n) => {
+        return n == A[i];
+    });
+    if (arr.length % 2 != 0){
+       return arr[0];
+    }
+  }
+  return 0;
+}
 
+console.log(findOdd([1,1,2,-2,5,2,4,4,-1,-2,5]));
+// end of Kata findodd, 6kyu
