@@ -79,19 +79,51 @@ console.log(domainName("www.xaker.ru"));
 let m = [1];
 let m1 = [[1,2],[3,5]];
 let m2 = [[1]];
+let m3 = [[2,4,2],[3,1,1],[1,2,0]]; // 10
+// m3[0] == [2,4,2]
+// m3[0].forEach(el => {
+// el
+// Можно найти количество всех элементов в массиве (flat) и от этого плясать, взяв корень из этого можно узнаь размерность матрицы
+
+for ( let i = 0; i < m3[0].length; i++){
+  m3[i] = 
+}
+
+
+// });
+//
+console.log(m[0].length);
 function determinant(m) {
   // return the determinant of the matrix passed in
- // return m[0][0]*m[1][1];
-  return (m[0][0]*m[1][1] - m[0][1]*m[1][0]);
+  let temp = m;
+ // if (m[0].length != undefined){ // if array have more than 1 dimension
+ //   for (let i = 0; i < m[0].length; i++){
+ //     m[i][0];
+ //   }
+ //  }
+  if ( m.length == undefined || temp.flat().length == 4){
+      return m[0][0]*m[1][1] - m[0][1]*m[1][0]; // базовый случай ( случай выхода/остановки рекурсии)
+  }
+  console.log(temp.flat().length+' temp flat length');
+  console.log(temp, m);
+  return 1;
+  // шаг рекурсии/рекурсивное условие 
 }
 
 /*TODO: 
 1) Как найти определитель самой маленькой матрицы? ++ выполнено
 2) Как закинуть это в универсальную рекурсию?
-3) 
+3) Вероятно, у нас будет запускаться несколько рекурсий внутри, параллельно, так сказать
+в цикле фор? фор с положительным и отрицательным ифом - отвечающие за + и - в формуле det(M)
+4) Функция, на которую поступила 3 на 3 матрица, должна вызывать мелкую 3 раза
+5) Функция, на которую поступила 4 на 4 матрица, должна вызывать мелкую 12 раз
+6) Почитать про рекурсию!?
+(1) 1 1 
+(1) 1 1 в скобках - миноры, от них считаем, с левой стороны
+(1) 1 1
 */
 //console.log(determinant([1])); // 1
 console.log(determinant([[1,1],[4,7]])); // 3
-console.log(determinant([[1,2,3][4,5,6][7,8,9]]));
+console.log(determinant([[2,4,2],[3,1,1],[1,2,0]])); // 10
 //console.log(determinant([[1]]));  // 1
 // end of Kata Matrix Determinant, 4kyu
