@@ -125,5 +125,4 @@ function determinant(m) {
 //console.log(determinant([1])); // 1
 console.log(determinant([[1,1],[4,7]])); // 3
 console.log(determinant([[2,4,2],[3,1,1],[1,2,0]])); // 10
-//console.log(determinant([[1]]));  // 1
 // end of Kata Matrix Determinant, 4kyu
